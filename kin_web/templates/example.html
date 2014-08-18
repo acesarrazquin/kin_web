@@ -1,0 +1,23 @@
+
+{% extends "base.html" %}
+
+{% block title %}
+    Getting data from Request object!
+{% endblock %}
+
+{% block content %}
+        <h4>Information about the URL</h4>
+        <table>
+        {% for meta in list1 %}
+            <tr><td>{{meta.0}}</td><td>{{meta.1}}</td></tr>
+        {% endfor %}
+        </table>
+        <br><hr><br>
+        <h4>Other information about the request</h4>
+        <table>
+        {% for meta in meta_list %}
+            <tr><td>{{meta.0}}</td><td>{{meta.1}}</td></tr>
+        {% endfor %}
+        </table>
+{% endblock %}
+

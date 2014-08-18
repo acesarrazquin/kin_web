@@ -1,0 +1,17 @@
+pid/jacques-pathwaydb/*
+*.txt
+*.dtd
+*.pdf
+*.tab
+*.csv
+*.tmp
+*.swp
+*.log
+*.sbml
+*.xml
+*.owl
+*.dump
+*.tsv
+*tmp
+*.xls
+*.xlsx
