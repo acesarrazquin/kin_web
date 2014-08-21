@@ -1,18 +1,59 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 
-<html lang="en"><meta charset="UTF-8">
+<html>
+
+<link type="text/css" rel="stylesheet" href="{% static 'main.css' %}" />
 
 <head>
-    <title>{% block title %}{% endblock %}</title>
+    <title>KinaseNet</title>
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 
 <body>
-    <h1>My content</h1>
-        {% block content %}{% endblock %}
+    <div id="wrapper">
+        <div id="header">
+            <a class="webtitle" href="/home">HUMKINNET</a>
+            <div class="cemmlogo"><a class="cemmlogo" href="http://www.cemm.oeaw.ac.at/" target="_blank">
+                <img src="{% static 'cemm_logo_transp_small font.png' %}" alt="my_image" height="50" width="150"/>
+            </a></div>
 
-        {% block footer %}
-            <hr>
-            <p>Thanks for visiting my site.</p>
-        {% endblock %}
+        </div>
+        <div>
+            <ul id="menu-bar">
+                <li class="{{home}}"><a href="/home">Home</a></li>
+                <li class="{{downloads}}"><a href="/downloads/">Downloads</a>
+                    <!--<ul>-->
+                    <!--<li><a href="#">Products Sub Menu 1</a></li>-->
+                    <!--<li><a href="#">Products Sub Menu 2</a></li>-->
+                    <!--<li><a href="#">Products Sub Menu 3</a></li>-->
+                    <!--<li><a href="#">Products Sub Menu 4</a></li>-->
+                    <!--</ul>-->
+                </li>
+                <li class="{{about}}"><a href="/about">About</a></li>
+                <li class="{{contact}}"><a href="/contact">Contact Us</a></li>
+            </ul>
+        </div>
+        <!--<div id="leftcolumn"><p></p></div>-->
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+        <!--<div id="rightcolumn"><p></p></div>-->
+        <div id="footer">
+            <p class="footer">* The content of this database is free for academic and non-profit use. For any commercial purpose, please
+                contact us beforehand. </p>
+            <p class="footer">** If you use any data from this website, please cite:<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4115268/" target="_blank">
+                <i>Colinge et al., Building and exploring and integrated human kinase network: Global organization and medical entry points.
+                    J Proteomics. 2014 Jul 31;107:113-27. </i></a>
+            </p>
+        </div>
+    </div>
 </body>
 </html>
+
+
+
+
+
+

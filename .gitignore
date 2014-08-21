@@ -15,3 +15,7 @@ pid/jacques-pathwaydb/*
 *tmp
 *.xls
 *.xlsx
+*.jpg
+*.png
+*.gif
+

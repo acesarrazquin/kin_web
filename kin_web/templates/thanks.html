@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <br>
+    <p>Thanks for contacting us.</p>
+    {% if email %}
+        <p>We will attend your request and send you an answer to <b><i>{{email}}</i></b> as soon as possible.</p>
+    {% else %}
+        <p>We will attend your request as soon as possible.</p>
+    {% endif %}
+    <br>
+{% endblock %}

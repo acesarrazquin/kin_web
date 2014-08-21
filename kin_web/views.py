@@ -3,9 +3,13 @@ from django.shortcuts import render
 import datetime
 from forms import ContactForm
 from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 
 def main(request):
-    return render(request, "main_menu.html")
+    return render(request, "base.html")
+
+def examples(request):
+    return render(request, "cssportal.html")
 
 def now(request):
     now = datetime.datetime.now()
@@ -51,24 +55,39 @@ def search(request):
 
     return HttpResponse(message)
 
+
+def home(request):
+    return render(request, 'home.html', {'home':'active'})
+
+def downloads(request):
+    return render(request, 'downloads.html', {'downloads':'active'})
+
+def about(request):
+    return render(request, 'about.html', {'about':'active'})
+
+def thanks(request):
+    email = request.session.get('email', False)
+    return render(request, 'thanks.html', {'email': email,
+                                           'contact': 'active'})
+
 def contact(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
-            send_mail(
+            email = cd.get('email','')
+            em = EmailMessage(
                 cd['subject'],
                 cd['message'],
-                cd.get('email', 'noreply@example.com'),
-                ['noreply@example.com'],
+                'noreply@noreply.com', # change this name
+                to = ['acesarrazquin@cemm.oeaw.ac.at'],
             )
+            em.send()
+            request.session['email'] = email
             return HttpResponseRedirect('/contact/thanks/')
     else:
         form = ContactForm(
-            initial={'subject':"I love your site!"}
+            initial={'subject':""}
         )
-
-    return render(request, 'contact_form.html', {'form': form})
-
-def thanks(request):
-    return HttpResponse("<h1>Tnaks!</h1>")
+    return render(request, 'contact.html', {'form': form,
+                                            'contact':'active'})

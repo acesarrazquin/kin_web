@@ -84,9 +84,13 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(os.path.dirname(__file__), 'static'),
+    os.path.join(os.path.dirname(__file__), 'static/downloads'),
+    os.path.join(os.path.dirname(__file__), 'static/images'),
 )
 
 # Templates (adrian)
 TEMPLATE_DIRS = (
     os.path.join(os.path.dirname(__file__), 'templates'),
 )
+
+# Mail (adrian)
