@@ -8,38 +8,45 @@
 
 <h4>Description</h4>
 
-<p>In spite of the importance of protein kinases for cellular regulation and their involvement in human disease and drug discovery, the structure and
-    logic of the global, integrated protein phosphorylation network has not yet been investigated in a comprehensive manner. Although continuous efforts
-    carried over the last years have increased our knowledge on how kinases phosphorylate and interact with other proteins and small molecules,
-    a systems-level understanding of the control provided by these proteins is still lacking.</p>
+<p>Protein physical interactions (PPIs), typically taking place in protein complexes, have proved to be useful to functionally associate proteins or
+genes in a broad range of studies. Additional physical interactions, such as enzyme-substrate, also inform on functional relationships.
+Furthermore, therapeutic agents such as small molecules or antibodies can be regarded as inducers of perturbations in cellular networks, thus linking
+information related to drug targets and protein interaction networks naturally.</p>
 
-<p>Here, we provide a compilation of an important corpus of interaction data around human protein kinases extracted from large public data collections.
-    We collected and integrated three different types of interactions, namely:</p>
+<p>Here, we provide a compilation of an important corpus of physical interaction data extracted from large public data collections.
+The collected interactions fall in three different categories:</p>
     <ul>
-        <li><em>Protein-protein interactions (PPI)</em>,  mainly from measurements of physical association -e.g. <i>affinity purification-mass spectrometry (AP-MS)</i>
-            and <i>yeast two-hybrid (Y2H)</i> experiments-</li>
+        <li><em>Protein-physical interactions (PPI)</em>,  mainly from measurements of physical association -e.g. <i>affinity purification-mass spectrometry (AP-MS)</i>
+            and <i>yeast two-hybrid (Y2H)</i> experiments-.</li>
         <li><em>Kinase-substrate interactions (KSI)</em>, corresponding to phosphorylation reactions, obtained originally by both experimental and
-            computational methods</li>
-        <li><em>Drug-protein interactions (DPI)</em>, which consist in known kinase inhibitors</li>
+            computational methods.</li>
+        <li><em>Drug-protein interactions (DPI)</em>, which consist in known kinase inhibitors.</li>
     </ul>
-    <p>Altogether, the integration of PPI, KSI and DPI in large numbers provides a unique opportunity to assemble a comprehensive kinase-centered network
-    and constitutes a necessary first step to perform a global study of kinases in their environment.</p>
 
-<p>For further details, refer to the following publication: <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4115268/" target="_blank">
-    <i>Colinge et al., "Building and exploring and integrated human kinase network: Global organization and medical entry points", J.Proteomics, 2014</i></a>
-</p>
-<p>In the future, we plan to complement this database with other features and tools in order to perform more context-specific analyses
-    of such a network.</p>
+<p>All together, the integration of PPI, KSI and DPI in large numbers provides the opportunity to study proteins or their coding genes in a broad
+functional context, and to further connect them with potential FDA-approved or tool compounds.</p>
+
+<p>The integrated PPI network has been maintained and updated at CeMM over several years and the recent addition of KSIs and DPIs was undertaken
+during a study we published recently about kinase networks: <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4115268/" target="_blank"><i>Colinge et
+al., "Building and exploring and integrated human kinase network: Global organization and medical entry points", J.Proteomics, 2014</i></a>.</p>
+
+<p>In the future, we plan to complement this database with additional enzyme-substrate interactions, bioinformatics tools, and the generation of
+an equivalent mouse network. Release frequency is every six months.</p>
 
 <br>
+
+<!--<h4>Data compilation algorithm</h4>
+
+<br>-->
 
 <h4>Current release</h4>
 
 <p>The current release, as of <i>20.August 2014</i>, includes:</p>
     <ul>
-        <li>14,146 proteins</li>
+        <li>14,888 proteins</li>
         <li>487 protein kinases</li>
-        <li>104,979 <i>PPIs</i></li>
+        <!--kinases correct??-->
+        <li>179,837 <i>PPIs</i></li>
             <ul class="submenu">
                 <li>- sources: <i><a href="http://www.ebi.ac.uk/intact/" target="_blank">IntAct</a>,
                              <a href="http://mint.bio.uniroma2.it/mint/Welcome.do" target="_blank">MINT</a>,
@@ -52,7 +59,7 @@
                              <a href="http://mips.helmholtz-muenchen.de/genre/proj/corum" target="_blank">CORUM</a></i>.
                 </li>
             </ul>
-        <li>23,444 <i>KSIs</i> (8,539 experimental + 14,905 computational)</li>
+        <li>23,534 <i>KSIs</i> (9,303 experimental + 14,231 computational)</li>
             <ul class="submenu">
                 <li>- sources: <i><a href="http://www.phosphosite.org/" target="_blank">PhosphoSitePlus</a>,
                     <a href="http://phosphonetworks.org/" target="_blank">PhosphoNetworks</a>,
@@ -61,7 +68,7 @@
                     <a href="http://www.ebi.ac.uk/intact/" target="_blank">IntAct</a></i>.
                 </li>
             </ul>
-        <li>8,046 <i>DPIs</i></li>
+        <li>7,824 <i>DPIs</i></li>
             <ul class="submenu">
                 <li>- sources: <i><a href="http://www.drugbank.ca/" target="_blank">DrugBank</a></i>, and publications by<i>
                     <a href="http://www.nature.com/nbt/journal/v29/n11/full/nbt.1990.html" target="_blank">Davis et al. 2011</a>,
@@ -74,10 +81,66 @@
                 </li>
             </ul>
     </ul>
-<p>The following heatmaps show the overlaps between different databases:</p>
-    <ul>
-        <li>PPI:</li>
-        <div class="heatmap"><img src="{% static 'ppi_counts_20140807.jpg' %}" alt="ppi_heatmap" height="600" width="600"/></div>
-    </ul>
+<!--<p>The following heatmaps show the overlaps between different databases:</p>-->
+    <!--<ul>-->
+        <!--<li>PPI:</li>-->
+        <!--<div class="heatmap"><img src="{% static 'ppi_counts_20140807.jpg' %}" alt="ppi_heatmap" height="600" width="600"/></div>-->
+    <!--</ul>-->
+
+<!--<br>-->
+
+<h4>Acknowledgements</h4>
+
+<p>We are very grateful to the several public repositories from which we collected data for their effort in making these data available to the
+largest community and for the permission (general or given to us explicitly) to parse and redistribute their data.</p>
+<br>
+
+<div class="logos">
+    <div class="logo"><a href="http://www.uniprot.org" target="_blank">
+        <img src="{% static 'uniprot.gif' %}" alt="UniProt" height="50" width="100"/>
+    </a></div>
+    <div class="logo"><a href="http://www.ebi.ac.uk/intact/" target="_blank">
+        <img src="{% static 'intact.png' %}" alt="IntAct" height="50" width="100"/>
+    </a></div>
+    <div class="logo"><a href="http://mint.bio.uniroma2.it/mint/" target="_blank">
+        <img src="{% static 'mint.jpg' %}" alt="Mint" height="50" width="150"/>
+    </a></div>
+    <div class="logo"><a href="http://www.innatedb.com/" target="_blank">
+        <img src="{% static 'innatedb.png' %}" alt="InnateDB" height="50" width="80"/>
+    </a></div>
+    <div class="logo"><a href="http://dip.doe-mbi.ucla.edu/dip/" target="_blank">
+        <img src="{% static 'dip.png' %}" alt="DIP" height="50" width="80"/>
+    </a></div>
+    <div class="logo"><a href="http://mips.helmholtz-muenchen.de/genre/proj/corum" target="_blank">
+        <img src="{% static 'corum.png' %}" alt="CORUM" height="40" width="90"/>
+    </a></div>
+    <div class="logo"><a href="http://www.hprd.org/" target="_blank">
+        <img src="{% static 'hprd.gif' %}" alt="HPRD" height="50" width="120"/>
+    </a></div>
+    <div class="logo"><a href="http://matrixdb.ibcp.fr/" target="_blank">
+        <img src="{% static 'matrixdb.png' %}" alt="MatrixDB" height="50" width="120"/>
+    </a></div>
+        <div class="logo"><a href="http://www.reactome.org/" target="_blank">
+        <img src="{% static 'reactome.png' %}" alt="Reactome" height="50" width="120"/>
+    </a></div>
+    <div class="logo"><a href="http://pid.nci.nih.gov/" target="_blank">
+        <img src="{% static 'pid.png' %}" alt="PID" height="50" width="200"/>
+    </a></div>
+    <div class="logo"><a href="http://www.phosphosite.org/" target="_blank">
+        <img src="{% static 'phosphositeplus.gif' %}" alt="PhosphoSitePlus" height="40" width="200"/>
+    </a></div>
+    <div class="logo"><a href="http://phospho.elm.eu.org/" target="_blank">
+        <img src="{% static 'phosphoelm.gif' %}" alt="Phospho.ELM" height="40" width="200"/>
+    </a></div>
+    <div class="logo"><a href="http://phosphonetworks.org/" target="_blank">
+        <img src="{% static 'phosphonetworks.png' %}" alt="PhosphoNetworks" height="40" width="220"/>
+    </a></div>
+    <div class="logo"><a href="http://networkin.info/" target="_blank">
+        <img src="{% static 'networkin.png' %}" alt="NetworKin" height="40" width="200"/>
+    </a></div>
+    <div class="logo"><a href="http://www.drugbank.ca/" target="_blank">
+        <img src="{% static 'drugbank.png' %}" alt="DrugBank" height="50" width="150"/>
+    </a></div>
+</div>
 
 {% endblock %}

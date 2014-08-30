@@ -8,14 +8,6 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
 
-    url(r'^hello/$', 'kin_web.views.hello', name='hello'),
-    url(r'^now/$', 'kin_web.views.now', name='now'),
-    url(r'^now/plus/(\d{1,2})/$', 'kin_web.views.plus', name='plus'),
-    url(r'^metadata/$', 'kin_web.views.meta', name='metadata'),
-    url(r'^search-form/$', 'kin_web.views.search_form', name='search-form'),
-    url(r'^search/$', 'kin_web.views.search', name='search'),
-    url(r'^cssportal/$', 'kin_web.views.examples'),
-
     url(r'^$', 'kin_web.views.home', name='main'),
     url(r'^home/$', 'kin_web.views.home', name='home'),
     url(r'^downloads/$', 'kin_web.views.downloads', name='downloads'),
